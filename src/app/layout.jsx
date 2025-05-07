@@ -1,7 +1,10 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-// Correct import paths (after moving CSS files to src/app/styles/)
+// Local Font Awesome (installed via npm)
+import "@fortawesome/fontawesome-free/css/all.min.css";
+
+// Other vendor and custom CSS
 import "./styles/vendor/animate.css";
 import "./styles/vendor/bootstrap.min.css";
 import "./styles/vendor/magnific-popup.css";
@@ -29,13 +32,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        {/* External CSS if needed */}
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-        />
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

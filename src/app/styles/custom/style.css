@@ -610,9 +610,7 @@ hr {
   z-index: 10000;
   position: fixed;
   overflow: visible;
-  background: #ffffff url("/stowa-clint/public/images/preloader.svg") no-repeat
-    center center;
-  /* background: #ffffff url("images/preloader.svg") no-repeat center center; */
+  background: #ffffff url("/images/preloader.svg") no-repeat center center;
 }
 
 /* 2.8 - Preloader Style - end
@@ -1276,6 +1274,18 @@ hr {
   font-weight: 400;
   margin-bottom: 0;
   margin-right: 4px;
+}
+.select_option select {
+  background: transparent;
+  color: white;
+  border: none;
+  appearance: none;
+  padding: 5px 30px 5px 10px;
+  font-size: 14px;
+  font-weight: 400;
+}
+.select_option select:disabled {
+  color: rgba(255, 255, 255, 0.4);
 }
 
 /* header select options - end */
@@ -6420,8 +6430,8 @@ hr {
   margin: 0 0 1em;
 }
 .product-sidebar .audio-widget {
-  background: url("../../images/sidebar-audio-bg.jpg") center center/cover
-    no-repeat local;
+  background: url("/images/sidebar-audio-bg.jpg") center center/cover no-repeat
+    local;
   border: 1px solid #e5e8ec;
   padding: 40px 30px;
 }
@@ -7023,8 +7033,8 @@ hr {
   border: 0;
 }
 .new_arrivals_section .deals_product_layout1 .bg_area {
-  background: url("../../images/products/img-1.jpg") center center/cover
-    no-repeat local;
+  background: url("/images/products/img-1.jpg") center center/cover no-repeat
+    local;
   text-align: left;
 }
 .new_arrivals_section .new-arrivals-grids {
@@ -7498,7 +7508,7 @@ hr {
 }
 .blog-pg-section .format-quote:before {
   content: "";
-  background: url("../../images/quote.png") center center/cover no-repeat local;
+  background: url("/images/quote.png") center center/cover no-repeat local;
   width: 72px;
   height: 58px;
   position: absolute;
@@ -7742,7 +7752,7 @@ hr {
 }
 .blog-s2-pg-section .format-quote:before {
   content: "";
-  background: url("../../images/quote.png") center center/cover no-repeat local;
+  background: url("/images/quote.png") center center/cover no-repeat local;
   width: 72px;
   height: 58px;
   position: absolute;
@@ -7893,7 +7903,7 @@ hr {
 }
 .blog-single-section .post blockquote:before {
   content: "";
-  background: url("../../images/quote.png") center center/cover no-repeat local;
+  background: url("/images/quote.png") center center/cover no-repeat local;
   width: 72px;
   height: 58px;
   position: absolute;

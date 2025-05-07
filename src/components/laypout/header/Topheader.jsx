@@ -13,13 +13,11 @@ const Topheader = () => {
                     <div className="flug_wrap">
                       <img src="/images/flug/flug_uk.png" alt="UK Flag" />
                     </div>
-                    <select>
-                      <option data-display="Select Option">
+                    <select defaultValue="">
+                      <option value="" disabled>
                         Select Your Language
                       </option>
-                      <option value="1" selected>
-                        English
-                      </option>
+                      <option value="1">English</option>
                       <option value="2">Bangla</option>
                       <option value="3" disabled>
                         Arabic
@@ -31,18 +29,16 @@ const Topheader = () => {
                 <li>
                   <div className="select_option">
                     <h3 className="title_text">Currency:</h3>
-                    <select>
-                      <option data-display="Select Option">
+                    <select defaultValue="">
+                      <option value="" disabled>
                         Select Your Currency
                       </option>
-                      <option value="united States Dollar" selected>
-                        USD
-                      </option>
-                      <option value="Armenian Dram">AMD</option>
-                      <option value="Australian Dollar" disabled>
+                      <option value="usd">USD</option>
+                      <option value="amd">AMD</option>
+                      <option value="aud" disabled>
                         AUD
                       </option>
-                      <option value="Austria">EUR</option>
+                      <option value="eur">EUR</option>
                     </select>
                   </div>
                 </li>
