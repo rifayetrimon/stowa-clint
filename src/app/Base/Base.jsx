@@ -1,13 +1,15 @@
 import Middleheader from "@/src/components/laypout/header/Middleheader";
 import Topheader from "@/src/components/laypout/header/Topheader";
+import Navbar from "@/src/components/laypout/header/Navbar";
 import React from "react";
 
 const Base = () => {
   return (
-    <div>
+    <header className="header_section header-style-no-collapse">
       <Topheader />
       <Middleheader />
-    </div>
+      <Navbar />
+    </header>
   );
 };
 

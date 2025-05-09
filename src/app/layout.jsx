@@ -4,6 +4,7 @@ import "./globals.css";
 // Local Font Awesome (installed via npm)
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
+import "flowbite";
 // Other vendor and custom CSS
 import "./styles/vendor/animate.css";
 import "./styles/vendor/bootstrap.min.css";

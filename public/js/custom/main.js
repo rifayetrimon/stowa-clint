@@ -125,29 +125,23 @@
 
   // multy count down - start
   // --------------------------------------------------
-  $(".countdown_timer").each(function () {
-    $("[data-countdown]").each(function () {
-      var $this = $(this),
-        finalDate = $(this).data("countdown");
-      $this.countdown(finalDate, function (event) {
-        var $this = $(this).html(
-          event.strftime(
-            "" +
-              '<li class="days_count"><strong>%D</strong><span>Days</span></li>' +
-              '<li class="hours_count"><strong>%H</strong><span>Hours</span></li>' +
-              '<li class="minutes_count"><strong>%M</strong><span>Mins</span></li>' +
-              '<li class="seconds_count"><strong>%S</strong><span>Secs</span></li>'
-          )
-        );
-      });
-    });
-  });
+  // $('.countdown_timer').each(function(){
+  //     $('[data-countdown]').each(function() {
+  //         var $this = $(this), finalDate = $(this).data('countdown');
+  //         $this.countdown(finalDate, function(event) {
+  //             var $this = $(this).html(event.strftime(''
+  //                 + '<li class="days_count"><strong>%D</strong><span>Days</span></li>'
+  //                 + '<li class="hours_count"><strong>%H</strong><span>Hours</span></li>'
+  //                 + '<li class="minutes_count"><strong>%M</strong><span>Mins</span></li>'
+  //                 + '<li class="seconds_count"><strong>%S</strong><span>Secs</span></li>'));
+  //         });
+  //     });
+  // });
   // multy count down - end
   // --------------------------------------------------
 
   // main slider - start
   // --------------------------------------------------
-
   $(".main_slider").slick({
     dots: true,
     fade: true,
@@ -858,8 +852,8 @@
   });
 
   /*------------------------------------------
-        = POST SLIDER
-    -------------------------------------------*/
+      = POST SLIDER
+  -------------------------------------------*/
   if ($(".post-slider".length)) {
     $(".post-slider").owlCarousel({
       mouseDrag: false,
@@ -877,8 +871,8 @@
   }
 
   /*------------------------------------------
-        = POPUP VIDEO
-    -------------------------------------------*/
+      = POPUP VIDEO
+  -------------------------------------------*/
   if ($(".video-btn").length) {
     $(".video-btn").on("click", function () {
       $.fancybox({
@@ -899,8 +893,8 @@
   }
 
   /*------------------------------------------
-        = TOGGLE HEADER CATEGORY DROPDOWN FOR ONLY HOME 1
-    -------------------------------------------*/
+      = TOGGLE HEADER CATEGORY DROPDOWN FOR ONLY HOME 1
+  -------------------------------------------*/
   function toggleHeaderCategory() {
     if ($(".header-style-no-collapse .allcategories_dropdown").length) {
       var windowWidth = $(window).width();
@@ -917,8 +911,8 @@
   }
 
   /*------------------------------------------
-        = woocommerce
-    -------------------------------------------*/
+      = woocommerce
+  -------------------------------------------*/
   if ($(".checkout-section").length) {
     var showLogInBtn = $(".woocommerce-info > a");
     var showCouponBtn = $(".showcoupon");
@@ -950,19 +944,19 @@
   }
 
   /*==========================================================================
-        WHEN DOCUMENT LOADING
-    ==========================================================================*/
+      WHEN DOCUMENT LOADING
+  ==========================================================================*/
   $(window).on("load", function () {
     toggleHeaderCategory();
   });
 
   /*==========================================================================
-    WHEN WINDOW SCROLL
+  WHEN WINDOW SCROLL
 ==========================================================================*/
   $(window).on("scroll", function () {});
 
   /*==========================================================================
-    WHEN WINDOW RESIZE
+  WHEN WINDOW RESIZE
 ==========================================================================*/
   $(window).on("resize", function () {
     clearTimeout($.data(this, "resizeTimer"));
@@ -978,5 +972,3 @@
   // quantity - end
   // --------------------------------------------------
 })(jQuery);
-
-console.log("✅ main.js is connected and runn!");
