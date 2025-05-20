@@ -18,7 +18,6 @@ import "./styles/custom/style.css";
 
 import Script from "next/script";
 
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -38,19 +37,29 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* You can add meta tags or other <head> content here if needed */}
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/icofont@1.0.1/icofont.min.css"
+        />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
         {/* Main page content */}
         <main>{children}</main>
 
         {/* JS scripts loaded from public/js/ */}
         <Script src="/js/vendor/jquery.min.js" strategy="beforeInteractive" />
         <Script src="/js/vendor/popper.min.js" strategy="beforeInteractive" />
-        <Script src="/js/vendor/bootstrap.min.js" strategy="beforeInteractive" />
+        <Script
+          src="/js/vendor/bootstrap.min.js"
+          strategy="beforeInteractive"
+        />
         <Script src="/js/vendor/gmaps.min.js" strategy="lazyOnload" />
-        <Script src="/js/vendor/jquery-plugins-collection.js" strategy="lazyOnload" />
+        <Script
+          src="/js/vendor/jquery-plugins-collection.js"
+          strategy="lazyOnload"
+        />
         <Script src="/js/custom/main.js" strategy="lazyOnload" />
       </body>
     </html>

@@ -9,7 +9,7 @@ const Banner = () => {
             <div className="main_slider" data-slick='{"arrows": false}'>
               <div
                 className="slider_item set-bg-image"
-                data-background="assets/images/slider/slide-2.jpg"
+                data-background="/images/slider/slide-2.jpg"
               >
                 <div className="slider_content">
                   <h3
@@ -49,7 +49,7 @@ const Banner = () => {
               </div>
               <div
                 className="slider_item set-bg-image"
-                data-background="assets/images/slider/slide-3.jpg"
+                data-background="/images/slider/slide-3.jpg"
               >
                 <div className="slider_content">
                   <h3
@@ -89,7 +89,7 @@ const Banner = () => {
               </div>
               <div
                 className="slider_item set-bg-image"
-                data-background="assets/images/slider/slide-1.jpg"
+                data-background="/images/slider/slide-1.jpg"
               >
                 <div className="slider_content">
                   <h3

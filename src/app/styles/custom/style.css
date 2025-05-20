@@ -1363,7 +1363,6 @@ body.dropdown-open::after {
   margin-right: 4px;
 }
 
-
 .select_option select {
   background: transparent;
   color: #000000;
@@ -1374,7 +1373,6 @@ body.dropdown-open::after {
   font-weight: 400;
   outline: none;
 }
-
 
 .select_option select:disabled {
   color: rgba(255, 0, 0, 0.4);
@@ -1624,8 +1622,10 @@ body.dropdown-open::after {
 .allcategories_dropdown {
   position: absolute;
   top: 0;
+  bottom: 0;
   width: 300px;
 }
+
 @media (max-width: 1199px) {
   .allcategories_dropdown {
     width: 250px;
@@ -1690,7 +1690,7 @@ body.dropdown-open::after {
   line-height: 1;
   font-size: 13px;
   font-weight: 500;
-  padding: 12px 0;
+  padding: 11.1px 0;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -1783,6 +1783,14 @@ body.dropdown-open::after {
 .dropdown > .nav-link::after {
   content: none !important;
   display: none !important;
+}
+
+.allcategories_collapse {
+  display: none;
+  transition: all 0.3s;
+}
+.allcategories_collapse.show {
+  display: block;
 }
 
 @media screen and (min-width: 1025px) {
@@ -2625,6 +2633,7 @@ body.dropdown-open::after {
 /* 3.5 Slider Section - start
 ================================================== */
 /* main slider - start */
+
 .main_slider {
   position: relative;
   margin: 10px 0 0 32px;
@@ -2648,7 +2657,7 @@ body.dropdown-open::after {
   -webkit-box-align: center;
   -ms-flex-align: center;
   background-color: #fafafa;
-  padding-top: 12%;
+  padding-top: 5%;
   padding-left: 50px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -2693,17 +2702,24 @@ body.dropdown-open::after {
   color: #fff;
 }
 .main_slider .slick-dots {
-  width: auto;
+  position: absolute;
   left: 50%;
-  bottom: 50px;
-  -webkit-transform: translateX(-50%);
+  bottom: 30px; /* adjust as needed */
   transform: translateX(-50%);
+  z-index: 3;
+  display: flex !important;
+  gap: 10px;
 }
 .main_slider .slick-dots li button {
+  font-size: 0;
+  color: transparent;
   background: #f1f1f1;
   width: 10px;
   height: 10px;
   border: 0;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
 }
 .main_slider .slick-dots li.slick-active button {
   background: #f02757;
@@ -3538,6 +3554,7 @@ body.dropdown-open::after {
   display: block;
   padding: 0 20px;
   border-radius: 4px;
+  background: #ffffff;
 }
 .newsletter_form .btn {
   background: #f02757;

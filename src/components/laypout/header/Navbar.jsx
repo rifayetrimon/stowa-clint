@@ -105,6 +105,30 @@ export default function HeaderBottom() {
                           Motorcycles
                         </a>
                       </li>
+                      <li>
+                        <a href="shop_grid.html">
+                          <i className="icon icon-Car"></i> Automobiles &
+                          Motorcycles
+                        </a>
+                      </li>
+                      <li>
+                        <a href="shop_grid.html">
+                          <i className="icon icon-Car"></i> Automobiles &
+                          Motorcycles
+                        </a>
+                      </li>
+                      <li>
+                        <a href="shop_grid.html">
+                          <i className="icon icon-Car"></i> Automobiles &
+                          Motorcycles
+                        </a>
+                      </li>
+                      <li>
+                        <a href="shop_grid.html">
+                          <i className="icon icon-Car"></i> Automobiles &
+                          Motorcycles
+                        </a>
+                      </li>
                     </ul>
                   </div>
                 </div>
