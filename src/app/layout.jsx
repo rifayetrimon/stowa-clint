@@ -1,11 +1,12 @@
+// app/layout.jsx
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 // Local Font Awesome (installed via npm)
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
+// Vendor and custom CSS
 import "flowbite";
-// Other vendor and custom CSS
 import "./styles/vendor/animate.css";
 import "./styles/vendor/bootstrap.min.css";
 import "./styles/vendor/magnific-popup.css";
@@ -14,6 +15,9 @@ import "./styles/vendor/owl.theme.default.min.css";
 import "./styles/vendor/slick.css";
 import "./styles/vendor/woocommerce.css";
 import "./styles/custom/style.css";
+
+import Script from "next/script";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,20 +37,21 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <head>
+        {/* You can add meta tags or other <head> content here if needed */}
+      </head>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+
+        {/* Main page content */}
+        <main>{children}</main>
 
         {/* JS scripts loaded from public/js/ */}
-        <script src="/js/vendor/jquery.min.js"></script>
-        <script src="/js/vendor/popper.min.js"></script>
-        <script src="/js/vendor/bootstrap.min.js"></script>
-        <script src="/js/vendor/gmaps.min.js"></script>
-        <script src="/js/vendor/jquery-plugins-collection.js"></script>
-
-        {/* Custom JS */}
-        <script src="/js/custom/main.js"></script>
+        <Script src="/js/vendor/jquery.min.js" strategy="beforeInteractive" />
+        <Script src="/js/vendor/popper.min.js" strategy="beforeInteractive" />
+        <Script src="/js/vendor/bootstrap.min.js" strategy="beforeInteractive" />
+        <Script src="/js/vendor/gmaps.min.js" strategy="lazyOnload" />
+        <Script src="/js/vendor/jquery-plugins-collection.js" strategy="lazyOnload" />
+        <Script src="/js/custom/main.js" strategy="lazyOnload" />
       </body>
     </html>
   );

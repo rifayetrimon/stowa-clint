@@ -1758,7 +1758,8 @@ body.dropdown-open::after {
 .allcategories_collapse2 .dropdown-toggle:after {
   float: right;
   border: none;
-  content: "";
+  /* content: ""; */
+  content: none !important;
   font-weight: 400;
   margin-left: 10px;
   vertical-align: middle;
@@ -1775,6 +1776,13 @@ body.dropdown-open::after {
 .allcategories_collapse2 .dropdown-menu li:hover a {
   color: #e23e1d;
   background-color: rgba(199, 161, 122, 0.04);
+}
+.allcategories_collapse2 .dropdown-toggle::after,
+.allcategories_collapse2 .dropdown > .nav-link::after,
+.dropdown-toggle::after,
+.dropdown > .nav-link::after {
+  content: none !important;
+  display: none !important;
 }
 
 @media screen and (min-width: 1025px) {
